@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iryna Life Navigator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+        .language-selector {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .language-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            background-color: #3498db;
+        }
+        .language-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <script>
+        // Автоматичне перенаправлення на основі мови браузера
+        document.addEventListener('DOMContentLoaded', function() {
+            var userLang = navigator.language || navigator.userLanguage; 
+            if (userLang.includes('uk')) { 
+                window.location.href = "/ua/"; 
+            } else if (userLang.includes('ru')) { 
+                window.location.href = "/ru/"; 
+            } else if (userLang.includes('de')) { 
+                window.location.href = "/de/"; 
+            } else { 
+                window.location.href = "/en/"; 
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="language-selector">
+        <h1>Оберіть мову / Choose Language</h1>
+        <a href="/ua/" class="language-btn">🇺🇦 Українська</a>
+        <a href="/ru/" class="language-btn">🇷🇺 Русский</a>
+        <a href="/en/" class="language-btn">🇬🇧 English</a>
+        <a href="/de/" class="language-btn">🇩🇪 Deutsch</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iryna - Your Health Consultant</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Iryna's Logo">
+            </div>
+            <div class="header-text">
+                <h1>Your Health and Beauty Consultant</h1>
+            </div>
+            <div class="header-controls">
+                <div class="language-switcher">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../ua/index.html">🇺🇦 UA</option>
+                        <option value="../ru/index.html">🇷🇺 RU</option>
+                        <option value="../en/index.html" selected>🇬🇧 EN</option>
+                        <option value="../de/index.html">🇩🇪 DE</option>
+                    </select>
+                </div>
+                <div class="auth-menu">
+                    <button>Login</button>
+                    <button>Register</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="block-1">
+                    <img src="../img/iryna.jpg" alt="Iryna">
+                </div>
+                <div class="block-2">
+                    <p>I am a happy person. I have been doing my favorite work for over 25 years.</p>
+                    <p><strong>List of directions:</strong></p>
+                    <ul>
+                        <li>Cleansing-Detox</li>
+                        <li>Weight Loss</li>
+                        <li>Rejuvenation</li>
+                    </ul>
+                    <button class="video-btn" data-video="https://www.youtube.com/embed/VIDEO_ID_HERE">Video Greeting</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>People's Thoughts</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card" data-video="https://www.youtube.com/embed/44Aj1HSn3So">
+                    <img src="../img/01.jpg" alt="Testimonial 1">
+                    <h3>How to Beat Diabetes</h3>
+                    <p>Amazing story.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Feedback Form</h2>
+            <form class="contact-form" action="https://db.life-navigator-xxi.com/db.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Your Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="send-site">Via Website</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Iryna Life Navigator</p>
+        </div>
+    </footer>
+
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-frame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ірина - Ваш консультант здоров'я</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Логотип Ірини">
+            </div>
+            <div class="header-text">
+                <h1>Ваш консультант здоров'я і краси</h1>
+            </div>
+            <div class="header-controls">
+                <div class="language-switcher">
+                    <select onchange="window.location.href=this.value">
+                        <option value="../ua/index.html" selected>🇺🇦 UA</option>
+                        <option value="../ru/index.html">🇷🇺 RU</option>
+                        <option value="../en/index.html">🇬🇧 EN</option>
+                        <option value="../de/index.html">🇩🇪 DE</option>
+                    </select>
+                </div>
+                <div class="auth-menu">
+                    <button>Вхід</button>
+                    <button>Реєстрація</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="block-1">
+                    <img src="../img/iryna.jpg" alt="Ірина">
+                </div>
+                <div class="block-2">
+                    <p>Я щаслива людина. Вже більше 25 років займаюся улюбленою справою. Добре знаю фізіологію причин порушення в роботі органів і виникнення діагнозів.</p>
+                    <p>Тому просто і легко допомагаю вирішувати питання по здоров'ю, зниженню ваги, омолодженню, підвищенню імунітету у дорослих і дітей.</p>
+                    <p><strong>Перелік напрямків:</strong></p>
+                    <ul>
+                        <li>Очищення-Детокс</li>
+                        <li>Паразитарка доросла</li>
+                        <li>Зниження ваги</li>
+                        <li>Омолодження</li>
+                    </ul>
+                    <button class="video-btn" data-video="https://www.youtube.com/embed/VIDEO_ID_HERE">Відео привітання</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Думки людей</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card" data-video="https://www.youtube.com/embed/44Aj1HSn3So">
+                    <img src="../img/01.jpg" alt="Відгук 1">
+                    <h3>Як перемогти діабет у 61</h3>
+                    <p>Дивовижна історія Сергія з Караганди.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Форма зворотного зв'язку</h2>
+            <form class="contact-form" action="https://db.life-navigator-xxi.com/db.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Ваше ім'я</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Ваш телефон</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Оберіть тему</label>
+                    <select id="topic">
+                        <option value="">Оберіть тему</option>
+                        <option value="Очищення-Детокс">Очищення-Детокс</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div id="selected-topics"></div>
+                    <input type="hidden" name="all_topics" id="all-topics-input">
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="send-whatsapp">Через Ватсап</button>
+                    <button type="submit" class="send-site">Через сайт</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Iryna Life Navigator</p>
+        </div>
+    </footer>
+
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-frame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

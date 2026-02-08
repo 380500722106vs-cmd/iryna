@@ -1,0 +1,428 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iryna Life Navigator</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Iryna Logo" id="logo-img">
+            </div>
+            <div class="header-text">
+                <h1 data-lang="uk">Ваш консультант здоров’я і краси</h1>
+                <h1 data-lang="ru">Ваш консультант здоровья и красоты</h1>
+                <h1 data-lang="en">Your Health and Beauty Consultant</h1>
+                <h1 data-lang="de">Ihr Gesundheits- und Schönheitsberater</h1>
+            </div>
+            <div class="header-controls">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="uk">🇺🇦 UA</option>
+                        <option value="ru">🇷🇺 RU</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="de">🇩🇪 DE</option>
+                    </select>
+                </div>
+                <div class="auth-menu">
+                    <button id="login-btn" data-lang="uk">Вхід</button>
+                    <button id="register-btn" data-lang="uk">Реєстрація</button>
+                    
+                    <button id="login-btn-ru" data-lang="ru" style="display:none;">Вход</button>
+                    <button id="register-btn-ru" data-lang="ru" style="display:none;">Регистрация</button>
+                    
+                    <button id="login-btn-en" data-lang="en" style="display:none;">Login</button>
+                    <button id="register-btn-en" data-lang="en" style="display:none;">Register</button>
+                    
+                    <button id="login-btn-de" data-lang="de" style="display:none;">Anmelden</button>
+                    <button id="register-btn-de" data-lang="de" style="display:none;">Registrieren</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section 1: About Iryna -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="iryna-photo">
+                        <img src="img/iryna.jpg" alt="Iryna Photo">
+                    </div>
+                    <div class="iryna-info">
+                        <div data-lang="uk">
+                            <p>Я щаслива людина. Вже більше 25 років займаюся улюбленою справою. Добре знаю фізіологію причин порушення в роботі органів і виникнення діагнозів.</p>
+                            <p>Тому просто і легко допомагаю вирішувати питання по здоров'ю, зниженню ваги, омолодженню, підвищенню імунітету у дорослих і дітей. Звати мене Ірина. Люблю знайомитися з людьми.</p>
+                            <p>Впевнена, що люди просто так не перетинаються в цьому житті. Допомагаю, у кого вже є питання по здоров'ю. І дуже, дуже люблю і радіюся, коли звертаються, поки діагнози ще не сформовані.</p>
+                            <p>Всі знають в медицині, що будь-який діагноз формується 6-8 років, а в суглобах всі 10-12. Хто готовий зберігати або відновлювати суглоби, відновити роботу кишечника, печінки, серця, очистити шкіру, налагодити роботу чоловічих і жіночих репродуктивних органів, легко розстатися з зайвою вагою за рахунок ліполізу, згоряння жирів в нічний час, вирішити питання омолодження, підготуватися до вагітності і отримати головний бонус – роки плюс, а вік мінус. Вам до мене.</p>
+                            <p><strong>Перелік напрямків:</strong></p>
+                            <ul>
+                                <li>Очищення-Детокс</li>
+                                <li>Паразитарка доросла</li>
+                                <li>Паразитарка дитяча</li>
+                                <li>Очищення і відновлення кишечника</li>
+                                <li>Відновлення роботи печінки</li>
+                                <li>Відновлення серцево-судинної системи</li>
+                                <li>Відновлення суглобів</li>
+                                <li>Відновлення нервової системи</li>
+                                <li>Відновлення чоловічого здоров'я</li>
+                                <li>Зниження ваги</li>
+                                <li>Омолодження</li>
+                                <li>Підготовка організму до пологів</li>
+                                <li>Бізнес пропозиція до професіоналів Б'юті індустрії</li>
+                            </ul>
+                            <p>Індивідуальний підхід, супровід до результату зі спеціалістом-консультантом-реабілітологом. До зустрічі!</p>
+                        </div>
+                        
+                        <div data-lang="ru" style="display:none;">
+                            <p>Я счастливый человек. Уже более 25 лет занимаюсь любимым делом. Хорошо знаю физиологию причин нарушения в работе органов и возникновения диагнозов.</p>
+                            <p>Поэтому просто и легко помогаю решать вопросы по здоровью, снижению веса, омоложению, повышению иммунитета у взрослых и детей. Зовут меня Ирина. Люблю знакомиться с людьми.</p>
+                            <p>Уверена, что люди просто так не пересекаются в этой жизни. Помогаю, у кого уже есть вопросы по здоровью. И очень, очень люблю и радуюсь, когда обращаются, пока диагнозы еще не сформированы.</p>
+                            <p>Все знают в медицине, что любой диагноз формируется 6-8 лет, а в суставах все 10-12. Кто готов сохранять или восстанавливать суставы, восстановить работу кишечника, печени, сердца, очистить кожу, наладить работу мужских и женских репродуктивных органов, легко расстаться с лишним весом за счет липолиза, сжигания жиров в ночное время, решить вопросы омоложения, подготовиться к беременности и получить главный бонус – годы плюс, а возраст минус. Вам ко мне.</p>
+                            <p><strong>Перечень направлений:</strong></p>
+                            <ul>
+                                <li>Очищение-Детокс</li>
+                                <li>Паразитарка взрослая</li>
+                                <li>Паразитарка детская</li>
+                                <li>Очищение и восстановление кишечника</li>
+                                <li>Восстановление работы печени</li>
+                                <li>Восстановление сердечно-сосудистой системы</li>
+                                <li>Восстановление суставов</li>
+                                <li>Восстановление нервной системы</li>
+                                <li>Восстановление мужского здоровья</li>
+                                <li>Снижение веса</li>
+                                <li>Омоложение</li>
+                                <li>Подготовка организма к родам</li>
+                                <li>Бизнес предложение к профессионалам Бьюти индустрии</li>
+                            </ul>
+                            <p>Индивидуальный подход, сопровождение до результата со специалистом-консультантом-реабилитологом. До встречи!</p>
+                        </div>
+                        
+                        <div data-lang="en" style="display:none;">
+                            <p>I am a happy person. I have been engaged in my favorite business for more than 25 years. I know well the physiology of the causes of organ dysfunction and the emergence of diagnoses.</p>
+                            <p>Therefore, I simply and easily help solve health problems, weight loss, rejuvenation, immunity enhancement in adults and children. My name is Irina. I love meeting people.</p>
+                            <p>I'm convinced that people don't just cross paths in this life. I help those who already have health concerns. And I really, really love and rejoice when people turn to me before diagnoses are formed.</p>
+                            <p>Everyone knows in medicine that any diagnosis is formed in 6-8 years, and in joints all 10-12. Those who are ready to preserve or restore joints, restore the functioning of the intestines, liver, heart, cleanse the skin, normalize the functioning of male and female reproductive organs, easily get rid of excess weight through lipolysis, burning fat at night, solve rejuvenation issues, prepare for pregnancy and receive the main bonus - years plus, age minus. Come to me.</p>
+                            <p><strong>List of directions:</strong></p>
+                            <ul>
+                                <li>Cleansing-Detox</li>
+                                <li>Adult Parasite Treatment</li>
+                                <li>Children's Parasite Treatment</li>
+                                <li>Cleansing and Restoring the Intestines</li>
+                                <li>Restoring Liver Function</li>
+                                <li>Restoring the Cardiovascular System</li>
+                                <li>Restoring Joints</li>
+                                <li>Restoring the Nervous System</li>
+                                <li>Restoring Male Health</li>
+                                <li>Weight Loss</li>
+                                <li>Rejuvenation</li>
+                                <li>Preparing the Body for Childbirth</li>
+                                <li>Business Proposal for Beauty Industry Professionals</li>
+                            </ul>
+                            <p>Individual approach, accompaniment to the result with a specialist consultant rehabilitologist. See you!</p>
+                        </div>
+                        
+                        <div data-lang="de" style="display:none;">
+                            <p>Ich bin ein glücklicher Mensch. Ich beschäftige mich seit über 25 Jahren mit meinem Lieblingsgeschäft. Ich kenne die Physiologie der Ursachen von Organstörungen und das Entstehen von Diagnosen gut.</p>
+                            <p>Deshalb helfe ich einfach und leicht dabei, Gesundheitsprobleme, Gewichtsverlust, Verjüngung und Stärkung der Immunität bei Erwachsenen und Kindern zu lösen. Mein Name ist Irina. Ich liebe es, Menschen kennenzulernen.</p>
+                            <p>Ich bin überzeugt, dass Menschen sich in diesem Leben nicht einfach so kreuzen. Ich helfe denen, die bereits gesundheitliche Probleme haben. Und ich liebe es sehr, sehr und freue mich, wenn man sich wendet, bevor die Diagnosen noch formuliert sind.</p>
+                            <p>Jeder weiß in der Medizin, dass jede Diagnose in 6-8 Jahren entsteht, und in den Gelenken alle 10-12. Wer bereit ist, Gelenke zu erhalten oder wiederherzustellen, die Funktion des Darms, der Leber, des Herzens wiederherzustellen, die Haut zu reinigen, die Funktion männlicher und weiblicher Fortpflanzungsorgane zu regulieren, sich leicht vom Übergewicht durch Lipolyse, Fettverbrennung in der Nacht zu trennen, Verjüngungsfragen zu lösen, sich auf eine Schwangerschaft vorzubereiten und den Hauptbonus zu erhalten - Jahre plus, Alter minus. Zu mir.</p>
+                            <p><strong>Liste der Richtungen:</strong></p>
+                            <ul>
+                                <li>Reinigung-Detox</li>
+                                <li>Erwachsenen-Parasitenbehandlung</li>
+                                <li>Kinder-Parasitenbehandlung</li>
+                                <li>Reinigung und Wiederherstellung des Darms</li>
+                                <li>Wiederherstellung der Leberfunktion</li>
+                                <li>Wiederherstellung des Herz-Kreislauf-Systems</li>
+                                <li>Wiederherstellung von Gelenken</li>
+                                <li>Wiederherstellung des Nervensystems</li>
+                                <li>Wiederherstellung der Männergesundheit</li>
+                                <li>Gewichtsverlust</li>
+                                <li>Verjüngung</li>
+                                <li>Vorbereitung des Körpers auf die Geburt</li>
+                                <li>Geschäftsangebot für Fachkräfte der Beauty-Branche</li>
+                            </ul>
+                            <p>Individueller Ansatz, Begleitung bis zum Ergebnis mit einem Spezialisten-Berater-Rehabilitologen. Bis zum Treffen!</p>
+                        </div>
+                        
+                        <button class="video-greeting-btn" data-lang="uk">Відео привітання</button>
+                        <button class="video-greeting-btn-ru" data-lang="ru" style="display:none;">Видео приветствие</button>
+                        <button class="video-greeting-btn-en" data-lang="en" style="display:none;">Video Greeting</button>
+                        <button class="video-greeting-btn-de" data-lang="de" style="display:none;">Video-Gruß</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 data-lang="uk">Думки людей</h2>
+                <h2 data-lang="ru" style="display:none;">Мнения людей</h2>
+                <h2 data-lang="en" style="display:none;">People's Thoughts</h2>
+                <h2 data-lang="de" style="display:none;">Gedanken der Menschen</h2>
+                
+                <div class="testimonials-container">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card" data-video="https://youtu.be/44Aj1HSn3So">
+                        <img src="img/01.jpg" alt="Testimonial 1">
+                        <h3 data-lang="uk">Як перемогти діабет у 61</h3>
+                        <h3 data-lang="ru" style="display:none;">Как победить диабет в 61</h3>
+                        <h3 data-lang="en" style="display:none;">How to Defeat Diabetes at 61</h3>
+                        <h3 data-lang="de" style="display:none;">Wie man Diabetes im Alter von 61 besiegt</h3>
+                        <p data-lang="uk">Дивовижна історія Сергія з Караганди, який за півроку кардинально змінив своє життя. Позбувшись залежності від таблеток, нормалізувавши цукор і тиск, він довів, що відновити здоров'я можна в будь-якому віці. Справжній приклад для всіх, хто шукає шлях до активного довголіття.</p>
+                        <p data-lang="ru" style="display:none;">Удивительная история Серика из Караганды, который за полгода кардинально изменил свою жизнь. Избавившись от зависимости от таблеток, нормализовав сахар и давление, он доказал, что восстановить здоровье можно в любом возрасте. Настоящий пример для всех, кто ищет путь к активному долголетию.</p>
+                        <p data-lang="en" style="display:none;">Amazing story of Serik from Karaganda, who radically changed his life in six months. Having gotten rid of dependence on pills, normalizing sugar and pressure, he proved that health can be restored at any age. A real example for everyone who is looking for a path to active longevity.</p>
+                        <p data-lang="de" style="display:none;">Erstaunliche Geschichte von Serik aus Karaganda, der sein Leben innerhalb von sechs Monaten radikal verändert hat. Nachdem er die Abhängigkeit von Pillen losgeworden war und Zucker und Druck normalisiert hatte, bewies er, dass man die Gesundheit in jedem Alter wiederherstellen kann. Ein echtes Beispiel für alle, die nach einem Weg zu aktiver Langlebigkeit suchen.</p>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card" data-video="https://youtu.be/M4LqyZFUb4I">
+                        <img src="img/02.jpg" alt="Testimonial 2">
+                        <h3 data-lang="uk">Як я переміг псоріаз назавжди</h3>
+                        <h3 data-lang="ru" style="display:none;">Как я победил псориаз навсегда</h3>
+                        <h3 data-lang="en" style="display:none;">How I Defeated Psoriasis Forever</h3>
+                        <h3 data-lang="de" style="display:none;">Wie ich Psoriasis für immer besiegt habe</h3>
+                        <p data-lang="uk">Історія Арсена з Києва - це потужний приклад того, як системний підхід до здоров'я перемагає невиліковні діагнози. Коли традиційна медицина не допомогла, нутриціологія і очищення організму повернули його до повноцінного життя без псоріазу. Обов'язково подивіться цей надихаючий відгук!</p>
+                        <p data-lang="ru" style="display:none;">История Арсена из Киева — это мощный пример того, как системный подход к здоровью побеждает неизлечимые диагнозы. Когда традиционная медицина не помогла, нутрициология и очистка организма вернули его к полноценной жизни без псориаза. Обязательно посмотрите этот вдохновляющий отзыв!</p>
+                        <p data-lang="en" style="display:none;">Arsen's story from Kyiv is a powerful example of how a systematic approach to health defeats incurable diagnoses. When traditional medicine didn't help, nutrition science and body cleansing returned him to a fulfilling life without psoriasis. Be sure to watch this inspiring review!</p>
+                        <p data-lang="de" style="display:none;">Die Geschichte von Arsen aus Kiew ist ein kraftvolles Beispiel dafür, wie ein systematischer Ansatz zur Gesundheit unheilbare Diagnosen besiegt. Als die traditionelle Medizin nicht half, brachten ihm Ernährungswissenschaft und Körperreinigung ein erfülltes Leben ohne Psoriasis zurück. Schauen Sie sich unbedingt diese inspirierende Rezension an!</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card" data-video="https://youtu.be/4MvoS9jPjwQ">
+                        <img src="img/03.jpg" alt="Testimonial 3">
+                        <h3 data-lang="uk">Перемога над дитячим атопічним дерматитом</h3>
+                        <h3 data-lang="ru" style="display:none;">Победа над детским атопическим дерматитом</h3>
+                        <h3 data-lang="en" style="display:none;">Victory Over Childhood Atopic Dermatitis</h3>
+                        <h3 data-lang="de" style="display:none;">Sieg über atopische Dermatitis bei Kindern</h3>
+                        <p data-lang="uk">Історія мами з Нижнього Новгорода про те, як натуральні продукти допомогли вилікувати важкий атопічний дерматит у дитини. Традиційні методи не допомагали, але нова система оздоровлення змінила життя всієї родини.</p>
+                        <p data-lang="ru" style="display:none;">История мамы из Нижнего Новгорода о том, как натуральные продукты помогли вылечить тяжелый атопический дерматит у ребенка. Традиционные методы не помогали, но новая система оздоровления изменила жизнь всей семьи.</p>
+                        <p data-lang="en" style="display:none;">The story of a mother from Nizhny Novgorod about how natural products helped cure severe atopic dermatitis in her child. Traditional methods didn't help, but the new health system changed the whole family's life.</p>
+                        <p data-lang="de" style="display:none;">Die Geschichte einer Mutter aus Nischni Nowgorod darüber, wie natürliche Produkte halfen, schweren atopischen Dermatitis bei ihrem Kind zu heilen. Traditionelle Methoden halfen nicht, aber das neue Gesundheitssystem veränderte das Leben der ganzen Familie.</p>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card" data-video="https://youtu.be/YJOyar8S3Co">
+                        <img src="img/04.jpg" alt="Testimonial 4">
+                        <h3 data-lang="uk">Перемога над дитячим атопічним дерматитом</h3>
+                        <h3 data-lang="ru" style="display:none;">Победа над детским атопическим дерматитом</h3>
+                        <h3 data-lang="en" style="display:none;">Victory Over Childhood Atopic Dermatitis</h3>
+                        <h3 data-lang="de" style="display:none;">Sieg über atopische Dermatitis bei Kindern</h3>
+                        <p data-lang="uk">Історія мами з Нижнього Новгорода про те, як натуральні продукти допомогли вилікувати важкий атопічний дерматит у дитини. Традиційні методи не допомагали, але нова система оздоровлення змінила життя всієї родини.</p>
+                        <p data-lang="ru" style="display:none;">История мамы из Нижнего Новгорода о том, как натуральные продукты помогли вылечить тяжелый атопический дерматит у ребенка. Традиционные методы не помогали, но новая система оздоровления изменила жизнь всей семьи.</p>
+                        <p data-lang="en" style="display:none;">The story of a mother from Nizhny Novgorod about how natural products helped cure severe atopic dermatitis in her child. Traditional methods didn't help, but the new health system changed the whole family's life.</p>
+                        <p data-lang="de" style="display:none;">Die Geschichte einer Mutter aus Nischni Nowgorod darüber, wie natürliche Produkte halfen, schweren atopischen Dermatitis bei ihrem Kind zu heilen. Traditionelle Methoden halfen nicht, aber das neue Gesundheitssystem veränderte das Leben der ganzen Familie.</p>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card" data-video="https://youtu.be/3r0nfXflOY4">
+                        <img src="img/05.jpg" alt="Testimonial 5">
+                        <h3 data-lang="uk">Відновлення після 20 років болю</h3>
+                        <h3 data-lang="ru" style="display:none;">Выздоровление после 20 лет боли</h3>
+                        <h3 data-lang="en" style="display:none;">Recovery After 20 Years of Pain</h3>
+                        <h3 data-lang="de" style="display:none;">Genesung nach 20 Jahren Schmerzen</h3>
+                        <p data-lang="uk">Колишній санітарний лікар ділиться історією перемоги над коксартрозом і протрузіями після двох десятиліть страждань. Незважаючи на досвід у медицині, справжній прорив відбувся завдяки наставниці та альтернативному підходу.</p>
+                        <p data-lang="ru" style="display:none;">Бывший санитарный врач делится историей победы над коксартрозом и протрузиями после двух десятилетий страданий. Несмотря на опыт в медицине, настоящий прорыв произошёл благодаря наставнице и альтернативному подходу.</p>
+                        <p data-lang="en" style="display:none;">A former sanitary physician shares the story of victory over coxarthrosis and herniated discs after two decades of suffering. Despite experience in medicine, the real breakthrough happened thanks to a mentor and an alternative approach.</p>
+                        <p data-lang="de" style="display:none;">Ein ehemaliger Sanitätsarzt teilt die Geschichte des Sieges über Coxarthrose und Bandscheibenvorfälle nach zwei Jahrzehnten des Leidens. Trotz Erfahrung in der Medizin geschah der wahre Durchbruch dank einer Mentorin und einem alternativen Ansatz.</p>
+                    </div>
+                    
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card" data-video="https://youtu.be/KnZw2ewZkV0">
+                        <img src="img/06.jpg" alt="Testimonial 6">
+                        <h3 data-lang="uk">Чому аналізи на глистів марні</h3>
+                        <h3 data-lang="ru" style="display:none;">Почему анализы на глистов бесполезны</h3>
+                        <h3 data-lang="en" style="display:none;">Why Worm Tests Are Useless</h3>
+                        <h3 data-lang="de" style="display:none;">Warum Wurmeltests nutzlos sind</h3>
+                        <p data-lang="uk">Автор абсолютно прав: діагностика паразитів у дітей перетворилася на лотерею. Ми часто довіряємо папірцям з лабораторій більше, ніж здоровому глузду та логіці. Важливо розуміти біологічні цикли організму, а не сліпо вірити негативним результатам, які часто виявляються хибнонегативними через специфіку аналізів.</p>
+                        <p data-lang="ru" style="display:none;">Автор абсолютно прав: диагностика паразитов у детей превратилась в лотерею. Мы часто доверяем бумажкам из лабораторий больше, чем здравому смыслу и логике. Важно понимать биологические циклы организма, а не слепо верить отрицательным результатам, которые часто оказываются ложноотрицательными из-за специфики анализов.</p>
+                        <p data-lang="en" style="display:none;">The author is absolutely right: parasite diagnostics in children has turned into a lottery. We often trust laboratory papers more than common sense and logic. It's important to understand biological cycles of the body, rather than blindly believe negative results, which often turn out to be falsely negative due to the specifics of tests.</p>
+                        <p data-lang="de" style="display:none;">Der Autor hat absolut recht: Die Parasitendiagnose bei Kindern ist zu einer Lotterie geworden. Wir vertrauen oft Papierchen aus Laboren mehr als dem gesunden Menschenverstand und der Logik. Es ist wichtig, die biologischen Zyklen des Körpers zu verstehen, anstatt blind negativen Ergebnissen zu glauben, die aufgrund der Besonderheiten der Analysen oft falsch negativ sind.</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-navigation">
+                    <button class="prev-testimonial">←</button>
+                    <button class="next-testimonial">→</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Contact Form -->
+        <section class="contact-section">
+            <div class="container">
+                <h2 data-lang="uk">Форма зворотного зв'язку</h2>
+                <h2 data-lang="ru" style="display:none;">Форма обратной связи</h2>
+                <h2 data-lang="en" style="display:none;">Feedback Form</h2>
+                <h2 data-lang="de" style="display:none;">Rückmeldeformular</h2>
+                
+                <div class="contact-info">
+                    <p data-lang="uk">Якщо у Вас є якісь питання, ви можете їх задати в формі зворотного контакту. Ви можете скористатися формою і задати мені питання. Я зв'яжусь з вами і надам вам необхідну консультацію.</p>
+                    <p data-lang="ru" style="display:none;">Если у Вас есть какие-то вопросы, вы можете их задать в форме обратного контакта. Вы можете воспользоваться формой и задать мне вопрос. Я свяжусь с вами и предоставлю вам необходимую консультацию.</p>
+                    <p data-lang="en" style="display:none;">If you have any questions, you can ask them in the feedback contact form. You can use the form to ask me a question. I will contact you and provide you with the necessary consultation.</p>
+                    <p data-lang="de" style="display:none;">Wenn Sie Fragen haben, können Sie diese im Feedback-Kontaktformular stellen. Sie können das Formular nutzen, um mir eine Frage zu stellen. Ich werde Sie kontaktieren und Ihnen die erforderliche Beratung anbieten.</p>
+                </div>
+                
+                <form class="contact-form" action="https://db.life-navigator-xxi.com/db.php" method="POST">
+                    <div class="form-group">
+                        <label for="name" data-lang="uk">Ваше ім'я</label>
+                        <label for="name" data-lang="ru" style="display:none;">Ваше имя</label>
+                        <label for="name" data-lang="en" style="display:none;">Your Name</label>
+                        <label for="name" data-lang="de" style="display:none;">Ihr Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" data-lang="uk">Ваш телефон</label>
+                        <label for="phone" data-lang="ru" style="display:none;">Ваш телефон</label>
+                        <label for="phone" data-lang="en" style="display:none;">Your Phone</label>
+                        <label for="phone" data-lang="de" style="display:none;">Ihre Telefonnummer</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="topic" data-lang="uk">Оберіть тему, яка вас цікавить</label>
+                        <label for="topic" data-lang="ru" style="display:none;">Выберите тему, которая вас интересует</label>
+                        <label for="topic" data-lang="en" style="display:none;">Select a topic that interests you</label>
+                        <label for="topic" data-lang="de" style="display:none;">Wählen Sie ein Thema, das Sie interessiert</label>
+                        <select id="topic" name="topic">
+                            <option value="" disabled selected data-lang="uk">Оберіть тему</option>
+                            <option value="" disabled selected data-lang="ru">Выберите тему</option>
+                            <option value="" disabled selected data-lang="en">Select a topic</option>
+                            <option value="" disabled selected data-lang="de">Thema auswählen</option>
+                            
+                            <option value="detox" data-lang="uk">Очищення-Детокс</option>
+                            <option value="detox" data-lang="ru">Очищение-Детокс</option>
+                            <option value="detox" data-lang="en">Cleansing-Detox</option>
+                            <option value="detox" data-lang="de">Reinigung-Detox</option>
+                            
+                            <option value="adult-parasites" data-lang="uk">Паразитарка доросла</option>
+                            <option value="adult-parasites" data-lang="ru">Паразитарка взрослая</option>
+                            <option value="adult-parasites" data-lang="en">Adult Parasite Treatment</option>
+                            <option value="adult-parasites" data-lang="de">Erwachsenen-Parasitenbehandlung</option>
+                            
+                            <option value="child-parasites" data-lang="uk">Паразитарка дитяча</option>
+                            <option value="child-parasites" data-lang="ru">Паразитарка детская</option>
+                            <option value="child-parasites" data-lang="en">Children's Parasite Treatment</option>
+                            <option value="child-parasites" data-lang="de">Kinder-Parasitenbehandlung</option>
+                            
+                            <option value="intestine" data-lang="uk">Очищення і відновлення кишечника</option>
+                            <option value="intestine" data-lang="ru">Очищение и восстановление кишечника</option>
+                            <option value="intestine" data-lang="en">Cleansing and Restoring the Intestines</option>
+                            <option value="intestine" data-lang="de">Reinigung und Wiederherstellung des Darms</option>
+                            
+                            <option value="liver" data-lang="uk">Відновлення роботи печінки</option>
+                            <option value="liver" data-lang="ru">Восстановление работы печени</option>
+                            <option value="liver" data-lang="en">Restoring Liver Function</option>
+                            <option value="liver" data-lang="de">Wiederherstellung der Leberfunktion</option>
+                            
+                            <option value="cardio" data-lang="uk">Відновлення серцево-судинної системи</option>
+                            <option value="cardio" data-lang="ru">Восстановление сердечно-сосудистой системы</option>
+                            <option value="cardio" data-lang="en">Restoring the Cardiovascular System</option>
+                            <option value="cardio" data-lang="de">Wiederherstellung des Herz-Kreislauf-Systems</option>
+                            
+                            <option value="joints" data-lang="uk">Відновлення суглобів</option>
+                            <option value="joints" data-lang="ru">Восстановление суставов</option>
+                            <option value="joints" data-lang="en">Restoring Joints</option>
+                            <option value="joints" data-lang="de">Wiederherstellung von Gelenken</option>
+                            
+                            <option value="nervous" data-lang="uk">Відновлення нервової системи</option>
+                            <option value="nervous" data-lang="ru">Восстановление нервной системы</option>
+                            <option value="nervous" data-lang="en">Restoring the Nervous System</option>
+                            <option value="nervous" data-lang="de">Wiederherstellung des Nervensystems</option>
+                            
+                            <option value="male-health" data-lang="uk">Відновлення чоловічого здоров'я</option>
+                            <option value="male-health" data-lang="ru">Восстановление мужского здоровья</option>
+                            <option value="male-health" data-lang="en">Restoring Male Health</option>
+                            <option value="male-health" data-lang="de">Wiederherstellung der Männergesundheit</option>
+                            
+                            <option value="weight-loss" data-lang="uk">Зниження ваги</option>
+                            <option value="weight-loss" data-lang="ru">Снижение веса</option>
+                            <option value="weight-loss" data-lang="en">Weight Loss</option>
+                            <option value="weight-loss" data-lang="de">Gewichtsverlust</option>
+                            
+                            <option value="rejuvenation" data-lang="uk">Омолодження</option>
+                            <option value="rejuvenation" data-lang="ru">Омоложение</option>
+                            <option value="rejuvenation" data-lang="en">Rejuvenation</option>
+                            <option value="rejuvenation" data-lang="de">Verjüngung</option>
+                            
+                            <option value="pregnancy" data-lang="uk">Підготовка організму до пологів</option>
+                            <option value="pregnancy" data-lang="ru">Подготовка организма к родам</option>
+                            <option value="pregnancy" data-lang="en">Preparing the Body for Childbirth</option>
+                            <option value="pregnancy" data-lang="de">Vorbereitung des Körpers auf die Geburt</option>
+                            
+                            <option value="business" data-lang="uk">Бізнес пропозиція до професіоналів Б'юті індустрії</option>
+                            <option value="business" data-lang="ru">Бизнес предложение к профессионалам Бьюти индустрии</option>
+                            <option value="business" data-lang="en">Business Proposal for Beauty Industry Professionals</option>
+                            <option value="business" data-lang="de">Geschäftsangebot für Fachkräfte der Beauty-Branche</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-lang="uk">Обрані теми:</label>
+                        <label data-lang="ru" style="display:none;">Выбранные темы:</label>
+                        <label data-lang="en" style="display:none;">Selected topics:</label>
+                        <label data-lang="de" style="display:none;">Ausgewählte Themen:</label>
+                        <div id="selected-topics">
+                            <!-- Selected topics will appear here -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="send-whatsapp" data-lang="uk">Через Ватсап</button>
+                        <button type="button" class="send-viber" data-lang="uk">Через Вайбер</button>
+                        <button type="button" class="send-telegram" data-lang="uk">Через Телеграм</button>
+                        <button type="button" class="send-email" data-lang="uk">Через електронну пошту</button>
+                        <button type="submit" class="send-site" data-lang="uk">Через сайт</button>
+                        
+                        <button type="button" class="send-whatsapp-ru" data-lang="ru" style="display:none;">Через Ватсап</button>
+                        <button type="button" class="send-viber-ru" data-lang="ru" style="display:none;">Через Вайбер</button>
+                        <button type="button" class="send-telegram-ru" data-lang="ru" style="display:none;">Через Телеграм</button>
+                        <button type="button" class="send-email-ru" data-lang="ru" style="display:none;">Через электронную почту</button>
+                        <button type="submit" class="send-site-ru" data-lang="ru" style="display:none;">Через сайт</button>
+                        
+                        <button type="button" class="send-whatsapp-en" data-lang="en" style="display:none;">Via WhatsApp</button>
+                        <button type="button" class="send-viber-en" data-lang="en" style="display:none;">Via Viber</button>
+                        <button type="button" class="send-telegram-en" data-lang="en" style="display:none;">Via Telegram</button>
+                        <button type="button" class="send-email-en" data-lang="en" style="display:none;">Via Email</button>
+                        <button type="submit" class="send-site-en" data-lang="en" style="display:none;">Via Website</button>
+                        
+                        <button type="button" class="send-whatsapp-de" data-lang="de" style="display:none;">Über WhatsApp</button>
+                        <button type="button" class="send-viber-de" data-lang="de" style="display:none;">Über Viber</button>
+                        <button type="button" class="send-telegram-de" data-lang="de" style="display:none;">Über Telegram</button>
+                        <button type="button" class="send-email-de" data-lang="de" style="display:none;">Per E-Mail</button>
+                        <button type="submit" class="send-site-de" data-lang="de" style="display:none;">Über Website</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Iryna Life Navigator. All rights reserved.</p>
+            <p>iryna.life-navigator-xxi.com</p>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-frame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

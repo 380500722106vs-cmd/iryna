@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iryna Life Navigator</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script>
+        // Auto-redirect to language version based on browser language
+        const userLang = navigator.language || navigator.userLanguage;
+        const langCode = userLang.substring(0, 2);
+        
+        const supportedLangs = ['ua', 'ru', 'en', 'de'];
+        const redirectLang = supportedLangs.includes(langCode) ? langCode : 'ua';
+        
+        window.location.href = `/${redirectLang}/`;
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
