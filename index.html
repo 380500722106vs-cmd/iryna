@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=./ua/">
     <title>Iryna Life Navigator</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <script>
@@ -13,10 +14,11 @@
         const supportedLangs = ['ua', 'ru', 'en', 'de'];
         const redirectLang = supportedLangs.includes(langCode) ? langCode : 'ua';
         
-        window.location.href = `/${redirectLang}/`;
+        window.location.href = `./${redirectLang}/`;
     </script>
 </head>
 <body>
-    <p>Redirecting...</p>
+    <p>Redirecting to <a href="./ua/">Ukrainian version</a>...</p>
+    <p>Or choose: <a href="./ua/">UA</a> | <a href="./ru/">RU</a> | <a href="./en/">EN</a> | <a href="./de/">DE</a></p>
 </body>
 </html>
