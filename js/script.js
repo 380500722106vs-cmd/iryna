@@ -15,44 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
     });
 
-    // Reviews slider (carousel for all screen sizes)
+    // Reviews slider (carousel - one slide at a time)
     const slider = document.querySelector('.reviews-slider');
     const prevBtn = document.querySelector('.slider-prev');
     const nextBtn = document.querySelector('.slider-next');
     const reviewCards = document.querySelectorAll('.review-card');
     let currentSlide = 0;
-    let slidesPerView = 1;
-    let totalSlides = reviewCards.length;
-
-    function updateSlidesPerView() {
-        if (window.innerWidth >= 1024) {
-            slidesPerView = 3;
-        } else if (window.innerWidth >= 768) {
-            slidesPerView = 2;
-        } else {
-            slidesPerView = 1;
-        }
-        
-        // Adjust card width based on slides per view
-        reviewCards.forEach(card => {
-            card.style.minWidth = `${100 / slidesPerView}%`;
-        });
-        
-        updateSlider();
-    }
+    const totalSlides = reviewCards.length;
 
     function updateSlider() {
-        const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
-        if (currentSlide > maxSlide) {
-            currentSlide = maxSlide;
-        }
-        if (currentSlide < 0) {
-            currentSlide = 0;
-        }
-        
         const offset = -(currentSlide * 100);
         slider.style.transform = `translateX(${offset}%)`;
-        
         updateDots();
     }
 
@@ -60,10 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const dotsContainer = document.querySelector('.slider-dots');
         if (!dotsContainer) return;
         
-        const maxSlide = Math.ceil(totalSlides / slidesPerView);
         dotsContainer.innerHTML = '';
         
-        for (let i = 0; i < maxSlide; i++) {
+        for (let i = 0; i < totalSlides; i++) {
             const dot = document.createElement('div');
             dot.className = `slider-dot ${i === currentSlide ? 'active' : ''}`;
             dot.addEventListener('click', () => {
@@ -78,15 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
         prevBtn.addEventListener('click', () => {
             currentSlide--;
             if (currentSlide < 0) {
-                currentSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+                currentSlide = totalSlides - 1;
             }
             updateSlider();
         });
 
         nextBtn.addEventListener('click', () => {
             currentSlide++;
-            const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
-            if (currentSlide > maxSlide) {
+            if (currentSlide >= totalSlides) {
                 currentSlide = 0;
             }
             updateSlider();
@@ -94,18 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize
-    updateSlidesPerView();
-    window.addEventListener('resize', updateSlidesPerView);
+    updateSlider();
 
     // Auto-play carousel
     let autoPlayInterval = setInterval(() => {
         currentSlide++;
-        const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
-        if (currentSlide > maxSlide) {
+        if (currentSlide >= totalSlides) {
             currentSlide = 0;
         }
         updateSlider();
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
     // Pause auto-play on hover
     const reviewsContainer = document.querySelector('.reviews-container');
@@ -117,8 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         reviewsContainer.addEventListener('mouseleave', () => {
             autoPlayInterval = setInterval(() => {
                 currentSlide++;
-                const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
-                if (currentSlide > maxSlide) {
+                if (currentSlide >= totalSlides) {
                     currentSlide = 0;
                 }
                 updateSlider();
