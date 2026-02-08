@@ -200,16 +200,19 @@ button {
 .reviews-container {
     position: relative;
     overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .reviews-slider {
     display: flex;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .review-card {
     min-width: 100%;
     padding: 1rem;
+    flex-shrink: 0;
 }
 
 .review-card-inner {
@@ -219,45 +222,87 @@ button {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.3s;
+    height: 100%;
 }
 
 .review-card-inner:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
 .review-image {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
 .review-content {
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .review-content h3 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
 }
 
 .review-content p {
     font-size: 0.9rem;
     color: #666;
+    line-height: 1.5;
 }
 
 .slider-controls {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .slider-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     background: var(--primary-color);
     color: white;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.slider-btn:hover {
+    background: #3a7bc8;
+    transform: scale(1.1);
+}
+
+.slider-btn:active {
+    transform: scale(0.95);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.slider-dot.active {
+    background: var(--primary-color);
+    transform: scale(1.3);
 }
 
 /* Section 3: Services */
@@ -519,16 +564,12 @@ button {
         flex: 1;
     }
     
-    .reviews-slider {
-        flex-wrap: wrap;
-    }
-    
     .review-card {
         min-width: 50%;
     }
     
-    .slider-controls {
-        display: none;
+    .review-image {
+        height: 220px;
     }
     
     .messenger-buttons {
@@ -539,5 +580,9 @@ button {
 @media (min-width: 1024px) {
     .review-card {
         min-width: 33.333%;
+    }
+    
+    .review-image {
+        height: 250px;
     }
 }

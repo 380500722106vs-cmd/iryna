@@ -15,40 +15,116 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
     });
 
-    // Reviews slider for mobile
+    // Reviews slider (carousel for all screen sizes)
     const slider = document.querySelector('.reviews-slider');
     const prevBtn = document.querySelector('.slider-prev');
     const nextBtn = document.querySelector('.slider-next');
+    const reviewCards = document.querySelectorAll('.review-card');
     let currentSlide = 0;
-    const totalSlides = document.querySelectorAll('.review-card').length;
+    let slidesPerView = 1;
+    let totalSlides = reviewCards.length;
+
+    function updateSlidesPerView() {
+        if (window.innerWidth >= 1024) {
+            slidesPerView = 3;
+        } else if (window.innerWidth >= 768) {
+            slidesPerView = 2;
+        } else {
+            slidesPerView = 1;
+        }
+        
+        // Adjust card width based on slides per view
+        reviewCards.forEach(card => {
+            card.style.minWidth = `${100 / slidesPerView}%`;
+        });
+        
+        updateSlider();
+    }
 
     function updateSlider() {
-        if (window.innerWidth < 768) {
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        } else {
-            slider.style.transform = 'translateX(0)';
+        const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+        if (currentSlide > maxSlide) {
+            currentSlide = maxSlide;
+        }
+        if (currentSlide < 0) {
+            currentSlide = 0;
+        }
+        
+        const offset = -(currentSlide * 100);
+        slider.style.transform = `translateX(${offset}%)`;
+        
+        updateDots();
+    }
+
+    function updateDots() {
+        const dotsContainer = document.querySelector('.slider-dots');
+        if (!dotsContainer) return;
+        
+        const maxSlide = Math.ceil(totalSlides / slidesPerView);
+        dotsContainer.innerHTML = '';
+        
+        for (let i = 0; i < maxSlide; i++) {
+            const dot = document.createElement('div');
+            dot.className = `slider-dot ${i === currentSlide ? 'active' : ''}`;
+            dot.addEventListener('click', () => {
+                currentSlide = i;
+                updateSlider();
+            });
+            dotsContainer.appendChild(dot);
         }
     }
 
     if (prevBtn && nextBtn) {
         prevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+            }
             updateSlider();
         });
 
         nextBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % totalSlides;
+            currentSlide++;
+            const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+            if (currentSlide > maxSlide) {
+                currentSlide = 0;
+            }
             updateSlider();
         });
     }
 
-    // Random initial slide on mobile
-    if (window.innerWidth < 768) {
-        currentSlide = Math.floor(Math.random() * totalSlides);
-        updateSlider();
-    }
+    // Initialize
+    updateSlidesPerView();
+    window.addEventListener('resize', updateSlidesPerView);
 
-    window.addEventListener('resize', updateSlider);
+    // Auto-play carousel
+    let autoPlayInterval = setInterval(() => {
+        currentSlide++;
+        const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+        if (currentSlide > maxSlide) {
+            currentSlide = 0;
+        }
+        updateSlider();
+    }, 5000); // Change slide every 5 seconds
+
+    // Pause auto-play on hover
+    const reviewsContainer = document.querySelector('.reviews-container');
+    if (reviewsContainer) {
+        reviewsContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+        
+        reviewsContainer.addEventListener('mouseleave', () => {
+            autoPlayInterval = setInterval(() => {
+                currentSlide++;
+                const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+                if (currentSlide > maxSlide) {
+                    currentSlide = 0;
+                }
+                updateSlider();
+            }, 5000);
+        });
+    }
 
     // Accordion
     const accordionHeaders = document.querySelectorAll('.accordion-header');
